@@ -8,3 +8,4 @@ streamlit
 ipykernel
 keras
 scikeras
+nltk
