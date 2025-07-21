@@ -9,3 +9,17 @@ pip install tensorboard
 
 
 taskkill /PID <PID> /F
+
+netstat -ano | findstr :8501
+OUTPUT:
+(C:\Users\james\development\gen-ai-course\venv) C:\Users\james\development\gen-ai-course>netstat -ano | findstr :8501
+  TCP    127.0.0.1:8501         0.0.0.0:0              LISTENING       11368
+  TCP    [::1]:8501             [::]:0                 LISTENING       11368
+  TCP    [::1]:8501             [::1]:56764            ESTABLISHED     11368
+  TCP    [::1]:8501             [::1]:56765            ESTABLISHED     11368
+  TCP    [::1]:56764            [::1]:8501             ESTABLISHED     31216
+  TCP    [::1]:56765            [::1]:8501             ESTABLISHED     31216
+
+taskkill /PID 11368 /F
+
+curl -fsSL https://ollama.com/install.sh | sh
