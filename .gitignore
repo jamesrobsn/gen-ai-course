@@ -1,2 +1,5 @@
 venv
 .env
+
+langchain\vector-store\chroma_index
+langchain\vector-store\faiss_index
