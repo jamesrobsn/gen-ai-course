@@ -2,4 +2,4 @@ venv
 .env
 
 langchain\vector-store\chroma_index
-langchain\vector-store\faiss_index
+langchain\vector-store\faiss_indexlangchain/vector-store/chroma_index/05390b03-8ebf-40c0-b0eb-2f7681859a24/data_level0.bin 
