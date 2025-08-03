@@ -23,3 +23,49 @@ OUTPUT:
 taskkill /PID 11368 /F
 
 curl -fsSL https://ollama.com/install.sh | sh
+
+
+
+### FIND WSL ADDRESS
+1. Run command in terminal
+hostname -I
+
+
+
+
+
+(base) james@lola:~$ sudo kill 643837
+(base) james@lola:~$ sudo lsof -i :643837
+(base) james@lola:~$ ollama serve
+Error: listen tcp 127.0.0.1:11434: bind: address already in use
+(base) james@lola:~$ sudo lsof -i :11434
+COMMAND    PID   USER   FD   TYPE   DEVICE SIZE/OFF NODE NAME
+ollama  644860 ollama    3u  IPv4 11356504      0t0  TCP localhost:11434 (LISTEN)
+(base) james@lola:~$ sudo systemctl stop ollama
+(base) james@lola:~$ sudo systemctl disable ollama
+Removed "/etc/systemd/system/default.target.wants/ollama.service".
+(base) james@lola:~$ ollama serve
+
+
+ollama create codemaster -f /home/james/development/gen-ai-course/codellama/modelfile
+
+ollama run codemaster
+(You can stop this after confirming it works; the API will use it.)
+
+
+curl http://localhost:11434/api/generate -d '{
+  "model": "codemaster",
+  "prompt": "Hello, world!",
+  "stream": false
+}'
+
+
+
+
+
+
+To reenable Ollama automatic start on boot, otherwise have to manually run ollama serve when needed
+sudo systemctl enable ollama
+sudo systemctl start ollama
+
+

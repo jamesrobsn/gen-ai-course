@@ -14,3 +14,8 @@
 
 ### How ChatGPT is Trained
 [Discover How ChatGPT is Trained](https://rpradeepmenon.medium.com/discover-how-chatgpt-is-trained-1f20b9777d1b)
+
+
+### Section 40 - Deployment of Gen AI Apps in Streamlit and Huggingspace
+[Search Engine LLM](https://github.com/krishnaik06/Search-Engine-LLM)
+
